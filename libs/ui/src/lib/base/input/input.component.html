@@ -1,0 +1,6 @@
+<div class="abs-group-control">
+  <input [type]="type" [class.filled]="!!value" (change)="onChange($event.target.value)" />
+  <span class="highlight"></span>
+  <span class="bar"></span>
+  <label>{{ label }}</label>
+</div>

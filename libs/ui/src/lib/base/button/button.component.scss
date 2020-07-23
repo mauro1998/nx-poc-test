@@ -1,0 +1,64 @@
+@import 'vars';
+@import 'fonts';
+@import 'breakpoints';
+
+:host {
+  &:last-child button {
+    margin-right: 0;
+  }
+
+  &.abs-primary button {
+    background: $color__background__button--primary;
+    color: $color__foreground__button--primary;
+
+    &:hover {
+      background: lighten($color__background__button--primary, 2);
+    }
+
+    &:active {
+      background: darken($color__background__button--primary, 5);
+    }
+  }
+
+  &.abs-secondary button {
+    background: $color__background__button--secondary;
+    color: $color__foreground__button--secondary;
+    border: 2px solid $color__border__button--secondary;
+    padding: 8px $unit;
+
+    &:hover {
+      color: lighten($color__foreground__button--secondary, 5);
+      border-color: darken($color__foreground__button--secondary, 5);
+    }
+
+    &:active {
+      color: darken($color__foreground__button--secondary, 20);
+      border-color: darken($color__foreground__button--secondary, 20);
+    }
+  }
+}
+
+.abs-button {
+  padding: 10px $unit;
+  outline: none;
+  border: 0 none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s all ease;
+  font-size: get-rems(13px);
+  @extend %poppins-extrabold;
+  min-width: get-rems(150px);
+  margin-right: $unit;
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  @include bp-until($breakpoint__sm) {
+    display: block;
+    width: 100%;
+    margin-bottom: $unit;
+  }
+}

@@ -1,0 +1,23 @@
+@import "vars";
+@import "breakpoints";
+
+.abs-sign-in-container {
+  position: relative;
+  background: $color__white;
+  padding: get-rems(70px) get-rems(60px);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include bp-until($breakpoint__md) {
+    padding: get-rems(50px) get-rems(40px);
+  }
+}
+
+.abs-form-actions {
+  text-align: center;
+}
+
+fieldset {
+  border: 0 none;
+}

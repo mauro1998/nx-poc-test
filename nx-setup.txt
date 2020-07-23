@@ -12,4 +12,10 @@ npx create-nx-workspace nx-poc-test --preset empty --cli angular --style scss
 npm install --save-dev @nrwl/angular
 nx g @nrwl/angular:application ng-app --prefix ng --skip-tests --routing --style scss --e2e-test-runner none
 
+# create Ionic app
+npm install -g ionic
+npm i -g native-run
+npm i -g cordova
 
+# run ionic app on android device
+ionic cordova run android --device

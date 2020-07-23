@@ -1,5 +1,5 @@
 {
-  "npmScope": "nx-ng-ion-poc-2",
+  "npmScope": "nx-ng-ion-poc",
   "affected": {
     "defaultBase": "master"
   },
@@ -23,6 +23,13 @@
   },
   "projects": {
     "ng-app": {
+      "tags": [],
+      "implicitDependencies": ["assets"]
+    },
+    "ui": {
+      "tags": []
+    },
+    "assets": {
       "tags": []
     }
   }

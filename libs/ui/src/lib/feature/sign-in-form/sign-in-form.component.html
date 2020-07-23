@@ -1,0 +1,16 @@
+<div class="abs-sign-in-container" [ngStyle]="{ maxWidth: width + 'px' }">
+  <div class="block">
+    <abs-text type="heading" centered="true">{{heading}}</abs-text>
+  </div>
+  <form class="abs-form block">
+    <fieldset>
+      <abs-input label="Email" type="text"></abs-input>
+      <abs-input label="Password" type="password"></abs-input>
+    </fieldset>
+    <div class="abs-form-actions">
+      <abs-button abs-primary>Sign In</abs-button>
+      <abs-button abs-secondary>Start Trial</abs-button>
+    </div>
+  </form>
+  <abs-text centered="true">Don't have an account? <abs-link>Create an Account</abs-link></abs-text>
+</div>

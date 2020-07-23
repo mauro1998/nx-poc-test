@@ -1,0 +1,37 @@
+@import 'vars';
+@import 'fonts';
+@import 'breakpoints';
+
+.abs-text {
+  @extend %poppins-medium;
+  color: $color__body__text;
+  font-size: get-rems(13px);
+
+  &--heading {
+    @extend %poppins-medium;
+    color: $color__heading__text;
+    font-size: get-rems(26px);
+
+    @include bp-until($breakpoint__md) {
+      font-size: get-rems(22px);
+    }
+
+    @include bp-until($breakpoint__sm) {
+      font-size: get-rems(18px);
+    }
+  }
+
+  &--subtitle {
+    @extend %poppins-medium;
+    color: $color__body__text;
+    font-size: get-rems(18px);
+
+    @include bp-until($breakpoint__md) {
+      font-size: get-rems(16px);
+    }
+  }
+
+  &--centered {
+    text-align: center;
+  }
+}
