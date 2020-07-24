@@ -1,7 +1,13 @@
 {
-  "name": "ion-app",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
+  "defaultProject": "ion-app",
+  "projects": {
+    "ion-app": {
+      "name": "ion-app",
+      "integrations": {
+        "cordova": {}
+      },
+      "type": "angular",
+      "root": "apps/ion-app"
+    }
+  }
 }
