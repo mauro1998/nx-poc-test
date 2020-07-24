@@ -3,6 +3,9 @@
   "projects": {
     "ng-app": {
       "projectType": "application",
+      "root": "apps/ng-app",
+      "sourceRoot": "apps/ng-app/src",
+      "prefix": "ng",
       "schematics": {
         "@schematics/angular:interceptor": {
           "skipTests": true
@@ -30,9 +33,6 @@
           "skipTests": true
         }
       },
-      "root": "apps/ng-app",
-      "sourceRoot": "apps/ng-app/src",
-      "prefix": "ng",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -127,6 +127,146 @@
         }
       }
     },
+    "ion-app": {
+      "projectType": "application",
+      "root": "apps/ion-app",
+      "sourceRoot": "apps/ion-app/src",
+      "prefix": "ion",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ion-app",
+            "index": "apps/ion-app/src/index.html",
+            "main": "apps/ion-app/src/main.ts",
+            "polyfills": "apps/ion-app/src/polyfills.ts",
+            "tsConfig": "apps/ion-app/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "apps/ion-app/src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
+              },
+              {
+                "input": "libs/assets",
+                "glob": "**/*",
+                "output": "assets"
+              }
+            ],
+            "styles": [
+              {
+                "input": "apps/ion-app/src/theme/variables.scss"
+              },
+              {
+                "input": "apps/ion-app/src/global.scss"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/ui/src/sass"]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ion-app/src/environments/environment.ts",
+                  "with": "apps/ion-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            },
+            "ci": {
+              "progress": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ion-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ion-app:build:production"
+            },
+            "ci": {
+              "progress": false
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ion-app:build"
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ion-app/jest.config.js",
+            "tsConfig": "apps/ion-app/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/ion-app/src/test-setup.ts"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ion-app/tsconfig.app.json",
+              "apps/ion-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/ion-app/**/*"]
+          }
+        },
+        "ionic-cordova-build": {
+          "builder": "@ionic/angular-toolkit:cordova-build",
+          "options": {
+            "browserTarget": "app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "app:build:production"
+            }
+          }
+        },
+        "ionic-cordova-serve": {
+          "builder": "@ionic/angular-toolkit:cordova-serve",
+          "options": {
+            "cordovaBuildTarget": "ion-app:ionic-cordova-build",
+            "devServerTarget": "ion-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "cordovaBuildTarget": "ion-app:ionic-cordova-build:production",
+              "devServerTarget": "ion-app:serve:production"
+            }
+          }
+        }
+      }
+    },
     "ui": {
       "projectType": "library",
       "root": "libs/ui",
@@ -176,6 +316,12 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
+    },
+    "@ionic/angular-toolkit:component": {
+      "styleext": "scss"
+    },
+    "@ionic/angular-toolkit:page": {
+      "styleext": "scss"
     }
   },
   "defaultProject": "ng-app"

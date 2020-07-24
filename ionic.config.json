@@ -1,0 +1,7 @@
+{
+  "name": "ion-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

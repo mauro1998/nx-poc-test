@@ -1,15 +1,25 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+*~
+*.sw[mnpcod]
 dist
-/tmp
-/out-tsc
+tmp
+.tmp
+*.tmp
+*.tmp.*
+out-tsc
+www
+.ionic
+.versions
+/platforms
+/plugins
 
 # dependencies
 node_modules
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
@@ -33,7 +43,12 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+*.log
+log.txt
+npm-debug.log*
 
 # System Files
 .DS_Store
 Thumbs.db
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/

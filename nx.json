@@ -26,6 +26,10 @@
       "tags": [],
       "implicitDependencies": ["assets"]
     },
+    "ion-app": {
+      "tags": [],
+      "implicitDependencies": ["assets"]
+    },
     "ui": {
       "tags": []
     },

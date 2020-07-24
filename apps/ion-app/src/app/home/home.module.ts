@@ -1,0 +1,19 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
+import { UiModule } from '@nx-ng-ion-poc/ui';
+import { HomePageRoutingModule } from './home-routing.module';
+import { HomePage } from './home.page';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    UiModule,
+  ],
+  declarations: [HomePage],
+})
+export class HomePageModule {}
