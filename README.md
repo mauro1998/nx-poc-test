@@ -2,7 +2,7 @@
 
 This project was generated using [Nx](https://nx.dev).
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+🔎  **Nx is a set of Extensible Dev Tools for Monorepos.**
 
 ## Quick Start
 
@@ -27,9 +27,17 @@ Navigate to http://localhost:4000/.
 
 The apps will automatically reload if you change any of the source files.
 
-**Running the Ionic application in an emulator:**
+**Running the Ionic application in an emulator or physical device:**
 
-**Android**: Make sure you have everything setup to run 
+Make sure you have everything setup to run the ionic application in a physical device or using an emulator.
+
+**Android**: If you are building for Android, follow the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html).
+
+`ionic cordova run android --device`
+
+**iOS**: If you are building for iOS, follow the [iOS Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html).
+
+
 
 ## Code scaffolding
 
