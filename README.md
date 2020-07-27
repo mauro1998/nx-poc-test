@@ -2,97 +2,57 @@
 
 This project was generated using [Nx](https://nx.dev).
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
-
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-## Quick Start & Documentation
+## Quick Start
 
-[Nx Documentation](https://nx.dev/angular)
+1. Clone this repository
+2. Install global dependencies: `npm install -g @nrwl/cli @angular/cli ionic cordova native-run`
+3. Install local dependencies: `npm install`
+4. At this point you should be able to run both applications in a local server.
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+## Local Development Server
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+**Running the Angular application:**
 
-## Adding capabilities to your workspace
+```npm run serve:ng```
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+Navigate to http://localhost:4200/.
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+**Running the Ionic application:**
 
-Below are our core plugins:
+```npm run serve:ng```
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+Navigate to http://localhost:4000/.
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+The apps will automatically reload if you change any of the source files.
 
-## Generate an application
+**Running the Ionic application in an emulator:**
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are sharable across libraries and applications. They can be imported from `@nx-ng-ion-poc/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+**Android**: Make sure you have everything setup to run 
 
 ## Code scaffolding
 
-Run `ng g component my-component --project=my-app` to generate a new component.
+Use the Nx CLI and angular schematics in order to generate code:
+
+`nx g [schematic]:[name] [options]`
+
+Here is an example for creating an Angular component in the Angular application:
+
+`nx g @nrwl/angular:component `
 
 ## Build
 
 Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
 ## Understand your workspace
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
-## Further help
+## Documentation
 
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+[Nx Documentation](https://nx.dev/angular)
 
-## ☁ Nx Cloud
+[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
 
-### Computation Memoization in the Cloud
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+[Nx Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
