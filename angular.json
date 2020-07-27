@@ -137,7 +137,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/ion-app",
+            "outputPath": "apps/ion-app/www",
             "index": "apps/ion-app/src/index.html",
             "main": "apps/ion-app/src/main.ts",
             "polyfills": "apps/ion-app/src/polyfills.ts",
