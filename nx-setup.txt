@@ -1,0 +1,26 @@
+# install nx-cli
+npm install -g @nrwl/cli
+npm install -g create-nx-workspace@latest
+
+# install Angular CLI
+npm install -g @angular/cli
+
+# create empty nx workspace
+npx create-nx-workspace nx-poc-test --preset empty --cli angular --style scss
+
+# create Angular app
+npm install --save-dev @nrwl/angular
+nx g @nrwl/angular:application ng-app --prefix ng --skip-tests --routing --style scss --e2e-test-runner none
+
+# install ionic dependencies
+npm install -g @ionic/cli cordova native-run
+
+# create Ionic app
+cd apps
+ionic start ion-app blank --type=angular --no-deps --no-git
+cd ion-app
+ionic integrations enable cordova --add
+ionic cordova platform add android
+
+# run ionic app on android device
+ionic cordova run android --device

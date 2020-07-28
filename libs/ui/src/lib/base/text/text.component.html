@@ -1,0 +1,10 @@
+<div
+  class="abs-text"
+  [ngClass]="{
+    'abs-text--heading': type === 'heading',
+    'abs-text--subtitle': type === 'subtitle',
+    'abs-text--centered': centered
+  }"
+>
+  <ng-content></ng-content>
+</div>

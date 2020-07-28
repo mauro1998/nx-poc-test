@@ -1,0 +1,19 @@
+@import "vars";
+@import "fonts";
+
+.abs-link {
+  @extend %poppins-medium;
+  color: $color__link;
+  font-size: get-rems(13px);
+  cursor: pointer;
+  transition: .3s all ease;
+  user-select: none;
+
+  &:hover {
+    color: lighten($color__link, 2);
+  }
+
+  &:active {
+    color: darken($color__link, 20);
+  }
+}

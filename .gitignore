@@ -1,0 +1,70 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# ionic app gitignore
+
+apps/ion-app/*~
+apps/ion-app/*.sw[mnpcod]
+apps/ion-app/.tmp
+apps/ion-app/*.tmp
+apps/ion-app/*.tmp.*
+apps/ion-app/*.sublime-project
+apps/ion-app/*.sublime-workspace
+apps/ion-app/.DS_Store
+apps/ion-app/Thumbs.db
+apps/ion-app/UserInterfaceState.xcuserstate
+apps/ion-app/$RECYCLE.BIN/
+
+apps/ion-app/*.log
+apps/ion-app/log.txt
+apps/ion-app/npm-debug.log*
+
+apps/ion-app/.idea
+apps/ion-app/.ionic
+apps/ion-app/.sass-cache
+apps/ion-app/.sourcemaps
+apps/ion-app/.versions
+apps/ion-app/.vscode
+apps/ion-app/coverage
+apps/ion-app/dist
+apps/ion-app/node_modules
+apps/ion-app/platforms
+apps/ion-app/plugins
+apps/ion-app/www

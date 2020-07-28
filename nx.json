@@ -1,0 +1,40 @@
+{
+  "npmScope": "nx-ng-ion-poc",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "ng-app": {
+      "tags": [],
+      "implicitDependencies": ["assets"]
+    },
+    "ion-app": {
+      "tags": [],
+      "implicitDependencies": ["assets"]
+    },
+    "ui": {
+      "tags": []
+    },
+    "assets": {
+      "tags": []
+    }
+  }
+}

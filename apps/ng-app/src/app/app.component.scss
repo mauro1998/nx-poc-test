@@ -1,0 +1,23 @@
+@import 'vars';
+
+.login-container {
+  background: $color__grey--light;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .logo {
+    margin: $unit * 2 0;
+    width: $unit * 15;
+    img {
+      width: 100%;
+    }
+  }
+
+  .form-container {
+    margin-bottom: $unit*3;
+  }
+}
