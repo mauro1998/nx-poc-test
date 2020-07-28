@@ -7,7 +7,7 @@ This project was generated using [Nx](https://nx.dev).
 ## Quick Start
 
 1. Clone this repository
-2. Install global dependencies: `npm install -g @nrwl/cli @angular/cli ionic cordova native-run`
+2. Install global dependencies: `npm install -g @nrwl/cli @angular/cli @ionic/cli cordova native-run`
 3. Install local dependencies: `npm install`
 4. At this point you should be able to run both applications in a local server.
 
@@ -31,13 +31,18 @@ The apps will automatically reload if you change any of the source files.
 
 Make sure you have everything setup to run the ionic application in a physical device or using an emulator.
 
-**Android**: If you are building for Android, follow the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html).
+**Android**: If you are building for Android, follow the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html) and install all the requirements.
 
-`ionic cordova run android --device`
+To run the application in a physical android device, run: `ionic cordova run android --device`
+To run the application in an android emulator, run: `ionic cordova emulate android`
 
-**iOS**: If you are building for iOS, follow the [iOS Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html).
+**iOS**: If you are building for iOS, follow the [iOS Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html) and install all the requirements.
 
+To run the application in a physical iOS device, run: `ionic cordova run ios --device`
+To run the application in an iOS emulator, run: `ionic cordova emulate ios`
 
+If you want to add live reload capabilities to make live changes just add the `-l` flag to any of the previous commands.
+i.e. `ionic cordova emulate android -l`
 
 ## Code scaffolding
 
