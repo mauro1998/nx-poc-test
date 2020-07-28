@@ -50,9 +50,10 @@ Use the Nx CLI and angular schematics in order to generate code:
 
 `nx g [schematic]:[name] [options]`
 
-Here is an example for creating an Angular component in the Angular application:
+Here are different examples: 
 
-`nx g @nrwl/angular:component `
+- Create an Angular component in the Angular application: `nx g @nrwl/angular:component test --project ng-app`
+- Create an Angular component in the UI library inside the base module: `nx g @nrwl/angular:component base/test --project ui`
 
 ## Build
 
